@@ -27,7 +27,9 @@ listContainer.addEventListener('click', function(e) {
 }, false);
 
 function clearTask() {
-    listContainer.innerHTML = '';
+    while (listContainer.firstChild) {
+        listContainer.removeChild(listContainer.firstChild);
+    }
     saveData();
 }
 
