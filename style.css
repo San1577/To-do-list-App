@@ -35,27 +35,42 @@
     background-color: #999;
     border-radius: 40px;
     margin-bottom: 20px;
+    position: relative;
 }
 .row input {
-    flex: 1;
+    width: 100%;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px 0 10px 20px;
     font-size: 1em;
 }
-.row button {
+.btnAdd {
     border: none;
     outline: none;
     background-color: #b52525;
-    padding: 16px 50px;
+    padding: 16px 40px;
     border-radius: 40px;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
+    position: absolute;
+    right: 90px;
 }
-.row button:hover {
+.btnClear {
+    border: none;
+    outline: none;
+    background-color: #23c08e;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.btnAdd:hover {
     background-color: #841a1a;
+}
+.btnClear:hover {
+    background-color: #198c67;
 }
 ul li{
     list-style: none;

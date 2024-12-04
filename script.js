@@ -26,6 +26,17 @@ listContainer.addEventListener('click', function(e) {
     } 
 }, false);
 
+function clearTask() {
+    listContainer.innerHTML = '';
+    saveData();
+}
+
+inputBox.addEventListener('keydown', (event) => {
+    if (event.key === "Enter") {
+        addTask();
+    }
+})
+
 function saveData() {
     localStorage.setItem("data", listContainer.innerHTML);
 }
@@ -34,6 +45,7 @@ function showTask() {
     listContainer.innerHTML = localStorage.getItem("data");
 }
 
-document.querySelector('.row button').addEventListener('click', addTask);
+document.querySelector('.btnAdd').addEventListener('click', addTask);
+document.querySelector('.btnClear').addEventListener('click', clearTask);
 
 showTask();
